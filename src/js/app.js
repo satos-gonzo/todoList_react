@@ -58,7 +58,7 @@ class TodoApp extends React.Component {
   /* 追加：検索して元に戻してもTaskが元に戻らないようにする */
   callBackHＡＮＤleToggle(taskData) {
     taskData['isDone'] = !taskData['isDone'];
-    this.ＳＥＴState(prevState => ({
+    this.setState(prevState => ({
       data: prevState.data.map(obj => (obj.id === taskData['id'] ?
         Object.assign(obj, { isDone: taskData['isDone'] }) : obj))
     }));
